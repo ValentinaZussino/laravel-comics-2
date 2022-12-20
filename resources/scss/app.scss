@@ -1,1 +1,156 @@
-@import '~bootstrap/scss/bootstrap'
+@use './partials/variables' as *;
+@import '~bootstrap/scss/bootstrap';
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+img {
+    max-width: 100%;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+}
+.blue_header {
+    background-color: $blue;
+    width: 100%;
+    height: 25px;
+
+    div.blue_container {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding-right: 2rem;
+
+        div {
+            padding: 5px 20px;
+            color: white;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+    }
+    
+}
+header {
+    background-color: white;
+    .container-header {
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+    #top-logo {width: 60px}
+    nav {height: 80px;}
+    ul {
+        height: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        li {
+            height: 100%;
+            a {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: $darkgray;
+            padding: 0 1rem;
+            line-height: 80px;
+            &.active {
+                color: $blue;
+            }
+            }
+            &:hover {background-color: rgb(221, 221, 221);}
+            &.active {
+                border-bottom: 5px solid $blue;
+            }
+        }
+        
+    }
+}
+.jumbo {
+    height: 35vh;
+    overflow: hidden;
+}
+.comic-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    width: 80%;
+
+    .vz_card{
+        width: calc((100% - 120px) / 6);
+        margin: 10px;
+
+        .img_card {
+            height: 200px;
+            overflow-y: hidden;
+
+            img{
+                width: 100%;
+            }
+
+        }
+        .text_card {
+            padding: 8px;
+            p{
+                text-transform: uppercase;
+                font-size: 13px;
+            } 
+        }
+    }
+}
+.load_button {
+    background-color: $blue;
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.bottom-footer {
+    background-color: $darkgray;
+    div.container {
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+        background-color: transparent;
+        border: 2px solid $blue;
+        color: white;
+        text-transform: uppercase;
+        padding: 15px;
+        }
+
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span {
+            text-transform: uppercase;
+            color: $blue;
+            font-weight: bold;
+            padding-right: 20px;
+            }
+            a {padding-right: 0.8rem; 
+                img {
+                    width:30px;
+                    cursor: pointer;
+
+                    &:hover{
+                        filter: brightness(0) invert(1);
+                    }
+                }   
+            }
+        }
+    }
+    
+}
