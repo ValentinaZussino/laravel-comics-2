@@ -5,6 +5,7 @@
     <div class="jumbo">
         <img src="{{Vite::asset('resources/img/jumbotron.jpg')}}" alt="">
     </div>
+    
     {{-- stampa comics --}}
     <div class="comic-list">
         @foreach ($comics as $comic)
@@ -18,11 +19,7 @@
         </div>
         @endforeach
     </div>
-    {{-- <ul>
-        @foreach($comics as $comic)
-        <li><a href="{{route('comics.show', $comic->id)}}">{{$comic->title}}</a></li>
-        @endforeach
-    </ul> --}}
+
     {{-- create a comic --}}
     <div class="text-center my-5">
         <a href="{{route('comics.create')}}" class="text-white text-uppercase text-decoration-none">Create a 
