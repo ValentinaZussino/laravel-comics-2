@@ -24,10 +24,12 @@
     </div>
 
     {{-- create a comic --}}
-    <div class="text-center my-5">
-        <a href="{{route('comics.create')}}" class="text-white text-uppercase text-decoration-none">Create a 
-        comic
-        </a>
+    <div class="text-center my-5 d-flex justify-content-center">
+        <div class="create_button">
+            <a href="{{route('comics.create')}}">Create a 
+                comic
+            </a>
+        </div> 
     </div>
     
     
