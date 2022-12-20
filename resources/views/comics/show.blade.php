@@ -14,4 +14,9 @@
             <span>{{$comic->type}}</span>
         </div>
     </section>
+    <div class="d-flex justify-content-center align-content-center">
+        <div class="load_button">
+            <span><a href="{{ route('comics.index') }}" class="text-white text-uppercase text-decoration-none">back</a></span>
+        </div>
+    </div> 
 @endsection

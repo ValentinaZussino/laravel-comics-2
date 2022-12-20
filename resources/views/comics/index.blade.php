@@ -11,7 +11,7 @@
         <li><a href="{{route('comics.show', $comic->id)}}">{{$comic->title}}</a></li>
         @endforeach
     </ul>
-    <a href="">Create a 
+    <a href="{{route('comics.create')}}">Create a 
         comic
     </a>
     {{-- <div class="comic-list">
