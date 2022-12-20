@@ -5,9 +5,12 @@
     <div class="jumbo">
         <img src="{{Vite::asset('resources/img/jumbotron.jpg')}}" alt="">
     </div>
-    
+
     {{-- stampa comics --}}
     <div class="comic-list">
+        <div class="tag-section bg-primary">
+            <h3>Current Series</h3>
+        </div>
         @foreach ($comics as $comic)
         <div class="vz_card">
             <div class="img_card">

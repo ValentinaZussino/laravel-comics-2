@@ -78,11 +78,31 @@ header {
     height: 35vh;
     overflow: hidden;
 }
+
 .comic-list {
     display: flex;
     flex-wrap: wrap;
     margin: 50px auto;
     width: 80%;
+    position: relative;
+
+    .tag-section{
+        position: absolute;
+        left: 0;
+        top: -75px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+
+        h3{
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+        }
+    }
 
     .vz_card{
         width: calc((100% - 120px) / 6);
