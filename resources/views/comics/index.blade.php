@@ -6,6 +6,14 @@
         <img src="{{Vite::asset('resources/img/jumbotron.jpg')}}" alt="">
     </div>
     {{-- stampa comics --}}
+    <ul>
+        @foreach($comics as $comic)
+        <li><a href="{{route('comics.show', $comic->id)}}">{{$comic->title}}</a></li>
+        @endforeach
+    </ul>
+    <a href="">Create a 
+        comic
+    </a>
     {{-- <div class="comic-list">
         @foreach ($comics as $item)
         <div class="vz_card">

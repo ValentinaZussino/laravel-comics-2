@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Guest\ComicsController as ComicsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::resource('comics', ComicsController::class);
 
 Route::get('/', function () {
     return view('home');  
 })->name('home');
 
-Route::get('/comics', function () {
-    $comics = config('comics');
-    return view('comics',compact('comics')); 
-})->name('comics');
+
