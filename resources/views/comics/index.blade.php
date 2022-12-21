@@ -19,13 +19,6 @@
             <div class="text_card">
                 <a href="{{route('comics.show', $comic->id)}}" class="text-white text-uppercase text-decoration-none">{{$comic->series}}</a>
             </div>
-            <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
-                @csrf
-                @method('DELETE')
-                <div>
-                    <button class="submit btn btn-danger">Delete</button>
-                </div>
-            </form>
         </div>
         @endforeach
     </div>
