@@ -6,7 +6,7 @@
      
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="title">Titolo</label>
-            <input type="text" name="title" id="title" placeholder="Inserisci un titolo" class="w-25 p-1">
+            <input required type="text" name="title" id="title" placeholder="Inserisci un titolo" class="w-25 p-1">
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
@@ -16,17 +16,17 @@
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="thumb">Thumb</label>
-            <input type="text" name="thumb" id="thumb" placeholder="Inserisci un'immagine" class="w-25 p-1">
+            <input required type="text" name="thumb" id="thumb" placeholder="Inserisci un'immagine" class="w-25 p-1">
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="price">Prezzo</label>
-            <input type="text" name="price" id="price" placeholder="Inserisci un prezzo" class="w-25 p-1">
+            <input required type="text" name="price" id="price" placeholder="Inserisci un prezzo" class="w-25 p-1">
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="series">Serie</label>
-            <input type="text" name="series" id="series"  placeholder="Inserisci la serie" class="w-25 p-1">
+            <input required type="text" name="series" id="series"  placeholder="Inserisci la serie" class="w-25 p-1">
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
@@ -36,7 +36,7 @@
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="type">Tipo</label>
-            <input type="text" name="type" id="type"  placeholder="Inserisci il tipo" class="w-25 p-1">
+            <input required type="text" name="type" id="type"  placeholder="Inserisci il tipo" class="w-25 p-1">
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
