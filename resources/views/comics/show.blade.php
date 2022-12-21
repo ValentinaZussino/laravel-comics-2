@@ -13,7 +13,7 @@
             <br>
             <span>{{$comic->type}}</span>
             <br>
-            <div class="load_button mt-5">
+            <div class="btn btn-success mt-5">
                 <a href="{{route('comics.edit', $comic->id)}}" class="text-white text-uppercase text-decoration-none">Update</a>
             </div>
         </div>

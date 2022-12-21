@@ -36,7 +36,11 @@
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="type">Tipo</label>
-            <input required type="text" name="type" id="type" value="{{old ('type', $comic->type)}}" placeholder="Inserisci il tipo" class="w-25 p-1">
+            <select  name="type" id="type" class="w-25 p-1">
+                <option value="comic book" {{old('type', $comic->type == 'comic book' ? 'selected' : '')}}>comic book</option>
+                <option value="graphic novel" {{old('type', $comic->type == 'graphic novel' ? 'selected' : '')}}>graphic novel</option>
+            </select>
+            {{-- <input required type="text" name="type" id="type" value="{{old ('type', $comic->type)}}" placeholder="Inserisci il tipo" class="w-25 p-1"> --}}
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
