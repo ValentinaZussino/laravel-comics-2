@@ -1,11 +1,55 @@
 @extends('layouts.app')
 @section('content')
-    <section class="text-white p-5">
-        <h1>{{$comic->title}}</h1>
-        <p>{{$comic->description}}</p>
-        <img src={{$comic->thumb}} alt="">
+    <section >
+        {{-- jumbo --}}
+        <div class="jumbo">
+            <img src="{{Vite::asset('resources/img/jumbotron.jpg')}}" alt="">
+        </div>
+        {{-- blue row + cover --}}
+        <div class="blue-row">
+            <div class="container-show">
+                <div class="cover-blue-row">
+                    <img src={{$comic->thumb}} alt="">
+                </div>
+            </div>
+        </div>
+        {{-- details --}}
+        <div class="container-show">
+            <div class="col-8 mt-5 pe-5">
+                <h1>{{$comic->title}}</h1>
+                <div class="bg-success">
+                    <span>{{$comic->price}}</span>
+                </div>
+                <p>{{$comic->description}}</p>
+                {{-- update --}}
+                <div class="btn btn-success mt-5">
+                    <a href="{{route('comics.edit', $comic->id)}}" class="text-white text-decoration-none">Update</a>
+                </div>
+                {{-- delete --}}
+                <button id="" class="myBtn btn btn-danger mt-5 ms-2">Delete</button>
+                <div id="" class="modal myModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <span class="text-black">Really want to delete {{$comic->title}} ?</span>
+                            <div class="w-100 text-center">
+                                <button type="submit" class="btn btn-danger mt-5">Delete</button>
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mt-5">
+                <div>
+                    <span>advertisement</span>
+                </div>
+                <img src="{{Vite::asset('resources/img/adv.jpg')}}" alt="">
+            </div>
+        </div>
+
         <div>
-            <span>{{$comic->price}}</span>
             <br>
             <span>{{$comic->series}}</span>
             <br>
@@ -13,9 +57,7 @@
             <br>
             <span>{{$comic->type}}</span>
             <br>
-            <div class="btn btn-success mt-5">
-                <a href="{{route('comics.edit', $comic->id)}}" class="text-white text-decoration-none">Update</a>
-            </div>
+            
             {{-- <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
@@ -23,27 +65,6 @@
                     <button type="submit" class="btn btn-danger mt-5">Delete</button>
                 </div>
             </form> --}}
-            
-            <!-- Trigger/Open The Modal -->
-            <button id="" class="myBtn">Open Modal</button>
-            <!-- The Modal -->
-            <div id="" class="modal myModal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <span class="text-black">Really want to delete {{$comic->title}}</span>
-                        <div>
-                            <button type="submit" class="btn btn-danger mt-5">Delete</button>
-                        </div>
-                    </form> 
-                </div>
-            
-            </div>
-  
         </div>
     </section>
     
